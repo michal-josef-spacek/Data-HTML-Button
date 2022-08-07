@@ -30,7 +30,6 @@ has data => (
 
 has data_type => (
 	ro => 1,
-	default => 'tags',
 );
 
 has disabled => (
@@ -47,7 +46,6 @@ has formenctype => (
 
 has formmethod => (
 	ro => 1,
-	default => 'get',
 );
 
 has id => (
@@ -77,6 +75,9 @@ sub BUILD {
 	check_bool($self, 'autofocus');
 
 	# Check data type.
+	if (! defined $self->{'data_type'}) {
+		$self->{'data_type'} = 'tags';
+	}
 	if (none { $self->{'data_type'} eq $_ } @DATA_TYPES) {
 		err "Parameter 'data_type' has bad value.";
 	}
@@ -85,6 +86,9 @@ sub BUILD {
 	check_bool($self, 'disabled');
 
 	# Check formmethod.
+	if (! defined $self->{'formmethod'}) {
+		$self->{'formmethod'} = 'get';
+	}
 	if (none { $self->{'formmethod'} eq $_ } @FORM_METHODS) {
 		err "Parameter 'formmethod' has bad value.";
 	}
