@@ -5,7 +5,7 @@ use warnings;
 
 use Error::Pure qw(err);
 use List::Util qw(none);
-use Mo qw(build default);
+use Mo qw(build default is);
 use Mo::utils qw(check_bool check_required);
 use Readonly;
 
