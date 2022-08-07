@@ -24,8 +24,8 @@ has css_class => (
 );
 
 has data => (
-	ro => 1,
 	default => [],
+	ro => 1,
 );
 
 has data_type => (
