@@ -72,6 +72,9 @@ sub BUILD {
 	my $self = shift;
 
 	# Check autofocus.
+	if (! defined $self->{'autofocus'}) {
+		$self->{'autofocus'} = 0;
+	}
 	check_bool($self, 'autofocus');
 
 	# Check data type.
@@ -83,6 +86,9 @@ sub BUILD {
 	}
 
 	# Check disabled.
+	if (! defined $self->{'disabled'}) {
+		$self->{'disabled'} = 0;
+	}
 	check_bool($self, 'disabled');
 
 	# Check formmethod.
