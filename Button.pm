@@ -9,7 +9,7 @@ use Mo qw(build default is);
 use Mo::utils qw(check_bool check_required);
 use Readonly;
 
-Readonly::Array our @DATA_TYPES => qw(tags);
+Readonly::Array our @DATA_TYPES => qw(plain tags);
 Readonly::Array our @FORM_METHODS => qw(get post);
 Readonly::Array our @TYPES => qw(button reset submit);
 
@@ -76,7 +76,7 @@ sub BUILD {
 
 	# Check data type.
 	if (! defined $self->{'data_type'}) {
-		$self->{'data_type'} = 'tags';
+		$self->{'data_type'} = 'plain';
 	}
 	if (none { $self->{'data_type'} eq $_ } @DATA_TYPES) {
 		err "Parameter 'data_type' has bad value.";
