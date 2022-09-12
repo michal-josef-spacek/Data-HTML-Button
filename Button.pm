@@ -10,6 +10,11 @@ use Mo::utils qw(check_bool check_required);
 use Readonly;
 
 Readonly::Array our @DATA_TYPES => qw(plain tags);
+Readonly::Array our @ENCTYPES => (
+	'application/x-www-form-urlencoded',
+	'multipart/form-data',
+	'text/plain',
+);
 Readonly::Array our @FORM_METHODS => qw(get post);
 Readonly::Array our @TYPES => qw(button reset submit);
 
@@ -91,6 +96,13 @@ sub BUILD {
 	}
 	check_bool($self, 'disabled');
 
+	# Check form_enctype.
+	if (defined $self->{'form_enctype'}) {
+		if (none { $self->{'form_enctype'} eq $_ } @ENCTYPES) {
+			err "Parameter 'form_enctype' has bad value.",
+				'Value', $self->{'form_enctype'},
+			;
+		}
 	}
 
 	# Check form_method.
