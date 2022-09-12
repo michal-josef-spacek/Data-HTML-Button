@@ -94,7 +94,9 @@ sub BUILD {
 	}
 
 	# Check type.
-	check_required($self, 'type');
+	if (! defined $self->{'type'}) {
+		$self->{'type'} = 'button';
+	}
 	if (none { $self->{'type'} eq $_ } @TYPES) {
 		err "Parameter 'type' has bad value.";
 	}
