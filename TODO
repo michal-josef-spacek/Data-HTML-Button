@@ -4,7 +4,8 @@ TODO
 https://www.w3schools.com/tags/tag_button.asp
 2. Tests.
 3. Add doc.
-4.
+4. If type != button we don't need set form_method and form_enctype. Check.
+5.
 
 Applied
 =======
