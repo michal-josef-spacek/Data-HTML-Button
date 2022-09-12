@@ -40,7 +40,7 @@ has form => (
 	ro => 1,
 );
 
-has formenctype => (
+has form_enctype => (
 	ro => 1,
 );
 
