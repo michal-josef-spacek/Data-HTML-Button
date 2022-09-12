@@ -44,7 +44,7 @@ has formenctype => (
 	ro => 1,
 );
 
-has formmethod => (
+has form_method => (
 	ro => 1,
 );
 
@@ -91,12 +91,14 @@ sub BUILD {
 	}
 	check_bool($self, 'disabled');
 
-	# Check formmethod.
-	if (! defined $self->{'formmethod'}) {
-		$self->{'formmethod'} = 'get';
 	}
-	if (none { $self->{'formmethod'} eq $_ } @FORM_METHODS) {
-		err "Parameter 'formmethod' has bad value.";
+
+	# Check form_method.
+	if (! defined $self->{'form_method'}) {
+		$self->{'form_method'} = 'get';
+	}
+	if (none { $self->{'form_method'} eq $_ } @FORM_METHODS) {
+		err "Parameter 'form_method' has bad value.";
 	}
 
 	# Check type.
