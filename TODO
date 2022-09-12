@@ -3,9 +3,10 @@ TODO
 1. Implement all parameters from spec:
 https://www.w3schools.com/tags/tag_button.asp
 2. Tests.
-3. Add doc.
 4. If type != button we don't need set form_method and form_enctype. Check.
 5.
 
 Applied
 =======
+3. Add doc.
+OK [20220912] skim
