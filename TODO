@@ -4,7 +4,8 @@ TODO
 https://www.w3schools.com/tags/tag_button.asp
 2. Tests.
 4. If type != button we don't need set form_method and form_enctype. Check.
-5.
+5. Check CSS class string.
+6.
 
 Applied
 =======
