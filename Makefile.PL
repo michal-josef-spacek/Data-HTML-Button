@@ -19,7 +19,7 @@ perl_version 5.008;
 readme_from 'Button.pm';
 recursive_author_tests('xt');
 requires 'Error::Pure' => 0;
-requires 'List::Util' => 0;
+requires 'List::Util' => 1.33;
 requires 'Mo' => 0;
 requires 'Mo::utils' => 0;
 requires 'Readonly' => 0;
