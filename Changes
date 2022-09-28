@@ -1,4 +1,5 @@
 0.03
+ - Fix minimal dependency for Mo::utils::check_bool().
 
 0.02 2022-09-14T10:44:03+02:00
  - Add constructor tests.
