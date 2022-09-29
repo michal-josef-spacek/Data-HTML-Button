@@ -4,7 +4,8 @@ TODO
 https://www.w3schools.com/tags/tag_button.asp
 4. If type != button we don't need set form_method and form_enctype. Check.
 5. Check CSS class string.
-6.
+6. Form method default 'get' is wrong. This field is only for submit
+7.
 
 Applied
 =======
