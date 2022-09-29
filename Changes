@@ -1,3 +1,5 @@
+0.05
+
 0.04 2022-09-29T10:22:02+02:00
  - Add tests.
  - Fix minimal dependency for Mo::utils.
