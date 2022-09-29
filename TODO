@@ -2,7 +2,6 @@ TODO
 ====
 1. Implement all parameters from spec:
 https://www.w3schools.com/tags/tag_button.asp
-2. Tests.
 4. If type != button we don't need set form_method and form_enctype. Check.
 5. Check CSS class string.
 6.
@@ -11,3 +10,6 @@ Applied
 =======
 3. Add doc.
 OK [20220912] skim
+
+2. Tests.
+OK [20220929] skim
