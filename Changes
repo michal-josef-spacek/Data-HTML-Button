@@ -1,5 +1,6 @@
 0.05
  - Add error checks for data.
+ - Update Module::Install to 1.21 version.
 
 0.04 2022-09-29T10:22:02+02:00
  - Add tests.
